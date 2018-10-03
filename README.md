@@ -8,9 +8,9 @@ Read further@ http://www.cs.columbia.edu/~orb/papers/simplification_acl_2011.pdf
 
 The key contributions of our work are:
 
-Create simplification rules for learning pairs of complex words and their simpler synonyms.
+1. Create simplification rules for learning pairs of complex words and their simpler synonyms.
 
-Create context aware rules for substituting complex words with simpler ones.
+2. Create context aware rules for substituting complex words with simpler ones.
 
 We rely on English Wikipedia (EW) and Simple English Wikipedia (SEW) corpora's to learn simplification rules.
 
