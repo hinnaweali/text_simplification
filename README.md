@@ -1,6 +1,6 @@
 # text_simplification
-A Context-Aware Approach to Lexical Simplification
-Semantically Identical Lexical Simplification
+Semantically Identical Lexical Simplification.
+
 Our goal is to replace complex words with simpler ones in sentences while retaining their meaning.
 
 Inspired by the concept proposed and implemented by Biran et Al,
