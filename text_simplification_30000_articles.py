@@ -659,7 +659,7 @@ def final_complexity(word, word_count, word_count_simple):
 #######################################
 
 # generate word vectors and word counts for simple wiki.
-(word_c_s, word_vec_n_s,word_vec_v_s,word_vec_adj_s,word_vec_adv_s) = read_files_and_create_vectors('C:/Users/together/Desktop/text_simp_project/simplewiki-20180601-pages-articles.xml')
+(word_c_s, word_vec_n_s,word_vec_v_s,word_vec_adj_s,word_vec_adv_s) = read_files_and_create_vectors('simplewiki-20180601-pages-articles.xml')
 
 #saving simple vectors, counts to pickle files
 counts_save_to_file(word_c_s, "word_count_simple_1_new_s.pickle")
