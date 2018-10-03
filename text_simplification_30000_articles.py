@@ -662,21 +662,21 @@ def final_complexity(word, word_count, word_count_simple):
 (word_c_s, word_vec_n_s,word_vec_v_s,word_vec_adj_s,word_vec_adv_s) = read_files_and_create_vectors('C:/Users/together/Desktop/text_simp_project/simplewiki-20180601-pages-articles.xml')
 
 #saving simple vectors, counts to pickle files
-counts_save_to_file(word_c_s, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/before_clean/word_count_simple_1_new_s.pickle")
-vectors_save_to_file(word_vec_n_s, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/before_clean/word_vectors_noun_1_s.pickle")
-vectors_save_to_file(word_vec_v_s, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/before_clean/word_vectors_verb_1_s.pickle")
-vectors_save_to_file(word_vec_adj_s, "C:/Users/together/Desktop/text_simp_project0/stanford//test30000/read_vec_words/read_vec_simple/before_clean/word_vectors_adj_1_s.pickle")
-vectors_save_to_file(word_vec_adv_s, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/before_clean/word_vectors_adv_1_s.pickle")
+counts_save_to_file(word_c_s, "word_count_simple_1_new_s.pickle")
+vectors_save_to_file(word_vec_n_s, "word_vectors_noun_1_s.pickle")
+vectors_save_to_file(word_vec_v_s, "word_vectors_verb_1_s.pickle")
+vectors_save_to_file(word_vec_adj_s, "word_vectors_adj_1_s.pickle")
+vectors_save_to_file(word_vec_adv_s, "word_vectors_adv_1_s.pickle")
 
 #Step 2 / Simple Wiki
 ######################################
 
 #reading word counts and word vectors files
-word_c_s_ = counts_read_from_file("C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/before_clean/word_count_simple_1_new_s.pickle")
-word_vec_n_s_ = vectors_read_from_file( "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/before_clean/word_vectors_noun_1_s.pickle")
-word_vec_v_s_  = vectors_read_from_file("C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/before_clean/word_vectors_verb_1_s.pickle")
-word_vec_adj_s_  = vectors_read_from_file("C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/before_clean/word_vectors_adj_1_s.pickle")
-word_vec_adv_s_ = vectors_read_from_file( "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/before_clean/word_vectors_adv_1_s.pickle")
+word_c_s_ = counts_read_from_file("word_count_simple_1_new_s.pickle")
+word_vec_n_s_ = vectors_read_from_file( "word_vectors_noun_1_s.pickle")
+word_vec_v_s_  = vectors_read_from_file("word_vectors_verb_1_s.pickle")
+word_vec_adj_s_  = vectors_read_from_file("word_vectors_adj_1_s.pickle")
+word_vec_adv_s_ = vectors_read_from_file( "word_vectors_adv_1_s.pickle")
 
 # Step 3 / Simple Wiki
 ######################################
@@ -685,35 +685,35 @@ word_vec_adv_s_ = vectors_read_from_file( "C:/Users/together/Desktop/text_simp_p
 (word_count_simple, word_vectors_nouns_s,word_vectors_verbs_s,word_vectors_adj_s,word_vectors_adv_s) = remove_words(word_c_s_, word_vec_n_s_,word_vec_v_s_,word_vec_adj_s_,word_vec_adv_s_)
 
 # save the word counts and vectors in excel sheets
-counts_save_to_file_f(word_count_simple, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/after_clean/word_count_simple_1_new_s.csv")
-vectors_save_to_file_f(word_vectors_nouns_s, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/after_clean/word_vectors_noun_1_s.csv")
-vectors_save_to_file_f(word_vectors_verbs_s, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/after_clean/word_vectors_verb_1_s.csv")
-vectors_save_to_file_f(word_vectors_adj_s, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/after_clean/word_vectors_adj_1_s.csv")
-vectors_save_to_file_f(word_vectors_adv_s, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_simple/after_clean/word_vectors_adv_1_s.csv")
+counts_save_to_file_f(word_count_simple, "word_count_simple_1_new_s.csv")
+vectors_save_to_file_f(word_vectors_nouns_s, "word_vectors_noun_1_s.csv")
+vectors_save_to_file_f(word_vectors_verbs_s, "word_vectors_verb_1_s.csv")
+vectors_save_to_file_f(word_vectors_adj_s, "word_vectors_adj_1_s.csv")
+vectors_save_to_file_f(word_vectors_adv_s, "word_vectors_adv_1_s.csv")
 
 
 # Step4 / English Wiki
 #######################################
 
 # generate word vectors and word counts for English wiki.
-(word_c_en, word_vec_n_en,word_vec_v_en,word_vec_adj_en,word_vec_adv_en) = read_files_and_create_vectors('C:/Users/together/Desktop/text_simp_project/enwiki-20180601-pages-articles.xml')
+(word_c_en, word_vec_n_en,word_vec_v_en,word_vec_adj_en,word_vec_adv_en) = read_files_and_create_vectors('enwiki-20180601-pages-articles.xml')
 
 #saving English vectors, counts to pickle files
-counts_save_to_file(word_c_en, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/before_clean/word_count_en.pickle")
-vectors_save_to_file(word_vec_n_en, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/before_clean/word_vectors_noun_en.pickle")
-vectors_save_to_file(word_vec_v_en, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/before_clean/word_vectors_verb_en.pickle")
-vectors_save_to_file(word_vec_adj_en, "C:/Users/together/Desktop/text_simp_project0/stanford//test30000/read_vec_words/read_vec_en/before_clean/word_vectors_adj_en.pickle")
-vectors_save_to_file(word_vec_adv_en, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/before_clean/word_vectors_adv_en.pickle")
+counts_save_to_file(word_c_en, "word_count_en.pickle")
+vectors_save_to_file(word_vec_n_en, "word_vectors_noun_en.pickle")
+vectors_save_to_file(word_vec_v_en, "word_vectors_verb_en.pickle")
+vectors_save_to_file(word_vec_adj_en, "word_vectors_adj_en.pickle")
+vectors_save_to_file(word_vec_adv_en, "word_vectors_adv_en.pickle")
 
 #Step5 /English Wiki
 ######################################
 
 #reading word counts and word vectors files
-word_c_en_ = counts_read_from_file("C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/before_clean/word_count_en.pickle")
-word_vec_n_en_ = vectors_read_from_file( "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/before_clean/word_vectors_noun_en.pickle")
-word_vec_v_en_  = vectors_read_from_file("C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/before_clean/word_vectors_verb_en.pickle")
-word_vec_adj_en_  = vectors_read_from_file("C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/before_clean/word_vectors_adj_en.pickle")
-word_vec_adv_en_ = vectors_read_from_file( "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/before_clean/word_vectors_adv_en.pickle")
+word_c_en_ = counts_read_from_file("word_count_en.pickle")
+word_vec_n_en_ = vectors_read_from_file( "word_vectors_noun_en.pickle")
+word_vec_v_en_  = vectors_read_from_file("word_vectors_verb_en.pickle")
+word_vec_adj_en_  = vectors_read_from_file("word_vectors_adj_en.pickle")
+word_vec_adv_en_ = vectors_read_from_file( "word_vectors_adv_en.pickle")
 
 #Step6 / English Wiki
 ######################################
@@ -722,11 +722,11 @@ word_vec_adv_en_ = vectors_read_from_file( "C:/Users/together/Desktop/text_simp_
 (word_count_en, word_vectors_nouns_en,word_vectors_verbs_en,word_vectors_adj_en,word_vectors_adv_en) = remove_words(word_c_en_, word_vec_n_en_,word_vec_v_en_,word_vec_adj_en_,word_vec_adv_en_)
 
 # save the word counts and vectors in excel sheets
-counts_save_to_file_f(word_count_en, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/after_clean/word_count_en.csv")
-vectors_save_to_file_f(word_vectors_nouns_en, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/after_clean/word_vectors_noun_en.csv")
-vectors_save_to_file_f(word_vectors_verbs_en, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/after_clean/word_vectors_verb_en.csv")
-vectors_save_to_file_f(word_vectors_adj_en, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/after_clean/word_vectors_adj_en.csv")
-vectors_save_to_file_f(word_vectors_adv_en, "C:/Users/together/Desktop/text_simp_project0/stanford/test30000/read_vec_words/read_vec_en/after_clean/word_vectors_adv_en.csv")
+counts_save_to_file_f(word_count_en, "word_count_en.csv")
+vectors_save_to_file_f(word_vectors_nouns_en, "word_vectors_noun_en.csv")
+vectors_save_to_file_f(word_vectors_verbs_en, "word_vectors_verb_en.csv")
+vectors_save_to_file_f(word_vectors_adj_en, "word_vectors_adj_en.csv")
+vectors_save_to_file_f(word_vectors_adv_en, "word_vectors_adv_en.csv")
 
 
 ######################################################################################################################
@@ -897,20 +897,20 @@ def calculate_similarity(word_vectors, word_count, word_vectors_simple, word_cou
 
 
     # save possible pairs to excel.
-    vectors_save_to_file(noun_pairs, 'C:/Users/together/Desktop/text_simp_project0/vectorssplit/pairs/noun_pairs.csv')
-    vectors_save_to_file(verb_pairs, 'C:/Users/together/Desktop/text_simp_project0/vectorssplit/pairs/verb_pairs.csv')
-    vectors_save_to_file(adj_pairs, 'C:/Users/together/Desktop/text_simp_project0/vectorssplit/pairs/adj_pairs.csv')
-    vectors_save_to_file(adv_pairs, 'C:/Users/together/Desktop/text_simp_project0/vectorssplit/pairs/adv_pairs.csv')
+    vectors_save_to_file(noun_pairs, 'noun_pairs.csv')
+    vectors_save_to_file(verb_pairs, 'verb_pairs.csv')
+    vectors_save_to_file(adj_pairs, 'adj_pairs.csv')
+    vectors_save_to_file(adv_pairs, 'adv_pairs.csv')
 
     return possible_pairs
 
 # Step1 / reading word counts and word vectors
 ##############################################
 
-word_vectors_simple = vectors_read_from_file ("/home/hinnawe/text_simplification/textblob/test30000/word_vectors_simple_30000_textblob_s.pickle")
-word_vectors = vectors_read_from_file ("/home/hinnawe/text_simplification/textblob/test30000/word_vectors_30000_textblob_en.pickle")
-word_count_simple = counts_read_from_file ("/home/hinnawe/text_simplification/textblob/test30000/word_count_simple_30000_textblob_s.pickle")
-word_count = counts_read_from_file("/home/hinnawe/text_simplification/textblob/test30000/word_count_30000_textblob_en.pickle")
+word_vectors_simple = vectors_read_from_file ("word_vectors_simple_30000_textblob_s.pickle")
+word_vectors = vectors_read_from_file ("word_vectors_30000_textblob_en.pickle")
+word_count_simple = counts_read_from_file ("word_count_simple_30000_textblob_s.pickle")
+word_count = counts_read_from_file("word_count_30000_textblob_en.pickle")
 
 # Step2 / Generate noun, verb, adjective and adverb pairs.
 ##############################################
